@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CommentSift – Search, sort &amp; export YouTube comments</title>
+<meta name="description" content="CommentSift is a free Chrome extension that turns YouTube comments into a searchable, sortable table you can export to CSV. Runs entirely in your browser.">
+<link rel="icon" href="images/icon128.png">
+<style>
+  :root { --teal:#0f766e; --teal-d:#134e4a; --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --bg:#f6f8f7; }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: var(--ink); background: var(--bg); line-height: 1.55; }
+  a { color: var(--teal); }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  header { background: linear-gradient(135deg, var(--teal), var(--teal-d)); color: #fff; padding: 56px 0 64px; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand img { width: 64px; height: 64px; }
+  .brand h1 { margin: 0; font-size: 40px; letter-spacing: -.5px; }
+  header p.lead { font-size: 20px; max-width: 620px; color: #ccfbf1; margin: 18px 0 26px; }
+  .cta { display: inline-block; background: #fff; color: var(--teal-d); font-weight: 700; padding: 13px 22px; border-radius: 999px; text-decoration: none; }
+  .cta:hover { background: #ecfdf5; }
+  .note { display: block; margin-top: 10px; font-size: 14px; color: #a7f3d0; }
+  .hero-shot { display: block; width: 100%; border-radius: 14px; box-shadow: 0 24px 60px rgba(15, 23, 42, .25); margin-top: -36px; background: #fff; }
+  section { padding: 56px 0 8px; }
+  h2 { font-size: 28px; margin: 0 0 20px; letter-spacing: -.3px; }
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 17px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .shots { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .shots img { width: 100%; border-radius: 12px; border: 1px solid var(--line); background: #fff; }
+  ol.steps { padding-left: 22px; font-size: 17px; }
+  ol.steps li { margin: 6px 0; }
+  kbd { font: 600 14px ui-monospace, Menlo, monospace; background: #fff; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 6px; }
+  footer { margin-top: 56px; padding: 28px 0 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+  footer .links { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 8px; }
+  @media (max-width: 600px) { .brand h1 { font-size: 32px; } header p.lead { font-size: 18px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand"><img src="images/icon128.png" alt=""><h1>CommentSift</h1></div>
+    <p class="lead">Search, sort and export YouTube comments in a clean table. Find what people are saying in seconds instead of scrolling for minutes.</p>
+    <!-- After the Chrome Web Store approves CommentSift, replace href="#install" with the store link. -->
+    <a class="cta" href="#install">Add to Chrome, it's free</a>
+    <span class="note">Runs entirely in your browser. No account, no tracking.</span>
+  </div>
+</header>
+
+<main class="wrap">
+  <img class="hero-shot" src="images/screenshot-1-table.png" alt="CommentSift showing YouTube comments in a sortable table">
+
+  <section>
+    <h2>What you can do</h2>
+    <div class="features">
+      <div class="card"><h3>Search every comment</h3><p>Find any word in comments, usernames or replies. Every match is highlighted.</p></div>
+      <div class="card"><h3>Sort your way</h3><p>By likes, number of replies, username or date, which YouTube itself can't do.</p></div>
+      <div class="card"><h3>Quick filters</h3><p>Pinned, hearted by the creator, creator replied, or comments with replies.</p></div>
+      <div class="card"><h3>Replies in place</h3><p>Open any thread inside the table. Creator replies are clearly marked.</p></div>
+      <div class="card"><h3>Export to CSV</h3><p>Save comments as a spreadsheet for Excel or Google Sheets.</p></div>
+      <div class="card"><h3>Make it yours</h3><p>Eight panel colours, and it follows YouTube's dark theme.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>See it in action</h2>
+    <div class="shots">
+      <img src="images/screenshot-2-search.png" alt="Searching comments with highlighted matches">
+      <img src="images/screenshot-3-replies.png" alt="Replies opened inside the table">
+      <img src="images/screenshot-4-colours.png" alt="Choosing a panel colour">
+      <img src="images/screenshot-5-dark.png" alt="CommentSift in dark mode">
+    </div>
+  </section>
+
+  <section id="install">
+    <h2>How to use</h2>
+    <ol class="steps">
+      <li>Install CommentSift from the Chrome Web Store.</li>
+      <li>Open any YouTube video and scroll to the comments.</li>
+      <li>Click <b>Table view</b> next to YouTube's "Sort by", or press <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>C</kbd>.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <div class="links">
+      <a href="privacy.html">Privacy policy</a>
+      <a href="https://github.com/krishnar0929/commentsift/issues">Report a problem</a>
+      <a href="mailto:krishnam.techie@gmail.com">krishnam.techie@gmail.com</a>
+    </div>
+    CommentSift is an independent tool and is not affiliated with or endorsed by YouTube or Google.
+  </footer>
+</main>
+</body>
+</html>
